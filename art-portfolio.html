@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Portfolio</title>
+  <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      background-color: #f5e8aa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Navigation */
+    .nav {
+      background-color: #5bf2a3;
+      padding: 60px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+    
+    .nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    
+    .nav a:hover {
+      color: #fff;
+    }
+    
+    /* Sections */
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    .section h2 {
+      color: #5bf2a3;
+      font-size: 36px;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    /* Decorative Elements */
+    .artwork {
+      display: inline-block;
+      margin: 20px;
+      border: 4px solid #5bf2a3;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    
+    .artwork:hover {
+      transform: scale(1.05);
+    }
+    
+    .artwork img {
+      max-width: 550px;
+      height: auto;
+    }
+    
+    /* Page animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    .animated {
+      animation-fill-mode: both;
+      animation-duration: 1s;
+      animation-name: fadeIn;
+    }
+	/* Footer */
+    .footer {
+      background-color: #5bf2a3;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+	  
+	  @media only screen and (max-width: 768px) {
+  /* Styles for small screens */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for medium-sized screens */
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Styles for large screens */
+}
+
+</style>
+<style>
+  /* Parallax Effect */
+  .parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+  }
+  
+  .parallax-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .parallax-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="parallax-section" style="background-image: url('https://drive.google.com/uc?export=view&id=1l1-uT-SAPseMvepiTDHu49gVxJkoEY4h');">
+  <div class="parallax-content">
+    <h2>Welcome to My Portfolio</h2>
+  </div>
+</div>
+
+  
+  <script>
+    // Smooth navigation scrolling
+    function smoothScroll(target) {
+      const element = document.getElementById(target);
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Animate elements on page load
+    function animateElements() {
+      const sections = document.querySelectorAll('.section');
+      const artworks = document.querySelectorAll('.artwork');
+      
+      sections.forEach(section => {
+        section.classList.add('animated');
+      });
+      
+      artworks.forEach(artwork => {
+        artwork.classList.add('animated');
+      });
+    }
+    
+    // Randomize rotation and animate elements when the page loads
+    window.addEventListener('load', () => {
+      randomizeRotation();
+      animateElements();
+    });
+  </script>
+</head>
+<body>
+  <div class="nav">
+    <a href="#" onclick="smoothScroll('commissions')">Commissions</a>
+    <a href="#" onclick="smoothScroll('normal-art')">Normal Art</a>
+    <a href="#" onclick="smoothScroll('logo-design')">Logo Design</a>
+	<a href="#" onclick="smoothScroll('shirt-design')">Shirt Design</a>
+    
+  </div>
+  
+  <div class="section" id="commissions">
+    <h2>Commissions</h2>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=113tCxo8KIw4ZWfy8BuIHFwMwtkOCVRKW" alt="Commission Artwork">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1u_HEpSX1kb9BSx7fgdf06kz2RRihCPfk" alt="Commission Artwork 2">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1WvudZ5pKPWiLm1uI5DK_JpSQcrw5g78_" alt="Commission Artwork 3">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1XHVtJ2vk0ZoWJBdzSFqPxGVTVGBAxAta" alt="Commission Artwork 4">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1LScNv0AA7ZI1oeAmx5D4AlGQklM2SVhW" alt="Commission Artwork 5">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1hJ6I_3UuFGbf4dKR7xDyx6o6yCsxGLwz" alt="Commission Artwork 6">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=160F-7sKXQ0HIEclymTJ30AbrPju4DAKG" alt="Commission Artwork 7">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=13wS-o9383sPfemivVBkdE0lYIVvqAyQg" alt="Commission Artwork 8">
+    </div>
+
+  </div>
+  <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1FUp5LZgxixLgJBgbyHNP3kVBXUNPnc3b" alt="Commission Artwork 9">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=128gdqT1mVBJ30embVGC-z-LVxSyFLyOw" alt="Commission Artwork 10">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1HpTuKScNWld2FXVcQD4WGKhJOPfc3pK1" alt="Commission Artwork 11">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1wXltQVISk0gahpZnwRLNPTbULumbnkjm" alt="Commission Artwork 12">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1NS48eddBNKQ_BLzdASyMf9JhJeFmRaVB" alt="Commission Artwork 13">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=11ueyW92E8zxMkCMI3Nwu-sG7LId--u9E" alt="Commission Artwork 14">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1qJmRTNIADUFho1AJHJHkZGsUA_QH-WwS" alt="Commission Artwork 15">
+    </div>
+	
+  
+  <div class="section" id="normal-art">
+    <h2>Normal Art (Normal as in mostly my OCs and stuff) </h2>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1EvfB0JInzqckoRppIov6YFhLXjmDxIrd" alt="Normal Artwork">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1M833G1t6eaLC8Ip6PwTCMoC0lKW6y3WL" alt="Normal Artwork 2">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1F1RBwOqBRTiZ4a3vCyQmbXZJoe-vmuZ6" alt="Normal Artwork 3">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1EwvHE42LR-GKDLo-l5GNzmlsjA7TiaFT" alt="Normal Artwork 4">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1F1m_64ZK74BSeD8WT2_SKvOQQgp5BVZK" alt="Normal Artwork 5">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1pvhJbfap0EYMVceGKjMypIRsqJjnWVy0" alt="Normal Artwork 5">
+    </div>
+    
+  </div>
+  
+  <div class="section" id="logo-design">
+    <h2>Logo Design (Yes just two) </h2>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1G6fmMxBMpBkNt-ERrHGxlQVWGK03Dgbx" alt="Logo Design">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1EpTFdqGqcjGSCWfKBCv_VF3BMokM3VRh" alt="Logo Design 2">
+    </div>
+    
+  </div>
+  <div class="section" id="shirt-design">
+    <h2>Shirt Design (Just my Designs, I dont sell the shirts)</h2>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1gSYneLFlpFQzNkheO3wjjnz3eVEVYIm6" alt="shirt-design ">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1kRWmUpXp9J06TN_YFFa3U_QBgXLUH8SF" alt="shirt-design 2">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1CIITJM430CkQ3lna81lyOf5MHHP0yn0N" alt="shirt-design 3">
+    </div>
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1TvNlNx1B6gmGS4F0Q7y0eCw7vjpNJRj7" alt="shirt-design 4">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=1xutVnDpOXIDAgZQVxZzmdqBi4GwGNqkF" alt="shirt-design 5">
+    </div>
+	<div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=16r9fp1rS51LLH2g9Kx0f-g-BySudYsPf" alt="shirt-design 6">
+    </div>
+    
+  </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Don't be shy to contact this small artist! Even a compliment works you know.</p> 
+    <div class="social-media">
+     <p> Social Media </p>
+      <ul>
+       <a href="https://www.facebook.com/GabrielLouis.silva.3363?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook fa-2x"></i>
+       </a>
+      </ul>
+      <ul>
+       <a href="https://twitter.com/AresIllustrati1?t=CRKpppGHij1yfzYfLO3Bqg&s=09" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter fa-2x"></i>
+       </a>
+      </ul>
+      <ul>
+       <a href="https://instagram.com/hey_its_alonzo?igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram fa-2x"></i>
+       </a>
+      </ul>
+      <ul>
+       <a href="https://www.deviantart.com/riv3rss" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-deviantart fa-2x"></i>
+       </a>
+      </ul>
+     <p> Mail </p>
+      <ul> My Mail <br>
+       <a href="mailto:xraissaxsilvax@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-envelope fa-2x"></i> 
+       </a>
+      </ul>
+      <ul> Virtual Assistant's Mail <br>
+       <a href="mailto:murmattiv@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-envelope fa-2x"></i>
+       </a>
+      </ul>
+      </div>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2023 Biju Tsukawa. All rights reserved.</p>
+  </div>
+  
+  
+  
+</body>
+</html>
